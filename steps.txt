@@ -1,0 +1,53 @@
+Steps to get the final reduced test suite:
+
+Initially run the generate script
+
+Clear the initial test suite T to avoid any errors
+
+Ask for the value N (number of test cases)
+
+Produce two integers randomly N times along with storing it in T.in
+
+Run reduce script which asks for the file name and the value K
+
+Clear the final test suite S.in to avoid any errors
+
+Using cut function compare the extension of the file to conclude if it is a .cpp file or .c file
+
+Accordingly create flags for testing and to get coverage values
+
+Run a for loop over each line of input in T.in along with executiing the program with the corresponding inputs
+
+Calculate the final branch coverage for test suite T and store it in a variable final_coverage
+
+Remove the .gcda file to get new coverage values
+
+Run a loop for maximum k times so that S.in dosen't have more than k inputs
+
+Clear the data.txt file to avoid any errors
+
+Run a loop over each line of T.in
+
+If S.in is not empty which means cnt!=0 then run the program for the inputs present in S.in
+
+Now run the program for the input present in the current line of T.in
+
+Calculate the branch coverage and store it in data.txt
+
+Do this for all the inputs present in T.in and store the branch coverage values in data.txt
+
+Exit the loop and run the python file
+
+Run a loop over each line in data.txt and split the lines such that to attain the decimal value of branch coverage 
+
+Store all the values in an array
+
+Now traverse through the array to find the input which gave the maximum branch coverage and store it in file max_cov.txt
+
+Remove the corresponding input line from T.in and add it to S.in. 
+
+For this process store all the lines of T.in a list, pop the corresponding index value of the input which gave maximum coverage and store in S.in and put rest of the lines back T.in
+
+Exit the python program
+
+Compare the value in max_cov.txt to final_coverage. If max_cov is larger then we can end our program or continue to run the program until we reach final_coverage or exhaustion of k
