@@ -3,7 +3,7 @@
 This program can be used to reduce or minimize the test suite of any code to the minimum possible but maintaining the same branch coverage
 In this case the given code is given below.
 
-'''
+```
 #include<stdio.h>
 
 int main(){
@@ -47,4 +47,4 @@ int main(){
 	printf("\n");
 	return 0;
 }
-'''
+```
